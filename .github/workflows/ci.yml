@@ -2,7 +2,7 @@ name: CI / Build & Release
 on:
   push:
     branches:
-      - main
+      - master
 jobs:
   build-and-release:
     runs-on: ubuntu-latest
@@ -60,4 +60,4 @@ jobs:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
         asset_path: build/libs/todo-app-${{ steps.get_version.outputs.VERSION }}.jar
         asset_name: todo-app-${{ steps.get_version.outputs.VERSION }}.jar
-        asset_content_type: application/java-archive
+        asset_content_type: application/java-archive //ab
